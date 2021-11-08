@@ -1,46 +1,60 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="右か左か、運命の選択"]
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
 
-「走るか寝るかするメロス」[l][r]
+「500円玉が入っているのは右か左か」[l][r]
 
-メロスは激怒した。[l][r]
+お兄ちゃんが500円をかけたギャンブルをけしかけてきた。[l][r]
 
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
+お兄ちゃんは右手か左手に500円玉を隠した。[l][r]
 
-(中略)[l][r]
+お兄ちゃんは私に問いかけた。[l][r]
 
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
+右か左かさ～てどっち。[l][r]
+あなたならどちらを選ぶ...？[l][r]
 
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+[link target=*tag_sleep] →右 [endlink][r]
+[link target=*tag_run] →左 [endlink][r]
+[link target=*tag_no] →どちらも選ばない [endlink][r]
 [s]
 
 *tag_sleep
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
 
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
 
-【 BAD END 】[l][cm]
+正解！[l][r]
+お兄ちゃんから500円玉をゲットした。[r]
+
+【 GOOD END 】[l][cm]
 
 [jump target=*start]
 
 *tag_run
 
-[bg storage=run.jpg time=500]
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
+不正解！[l][r]
+逆にお兄ちゃんに500円を払わなければならなくなった。[r]
 
-【 GOOD END 】[l][cm]
+【 BAD END 】[l][cm]
+
+[jump target=*start]
+
+*tag_no
+
+[cm]
+
+…[l][r]
+お兄ちゃんが両手を広げるとそこには…[l][r]
+どこにも500円玉は見当たらない。[l][r]
+500円玉の行方はまだ誰も知らない。[l][r]
+（多分お兄ちゃんが横領した。）[r]
+
+【 MYSTERIOUS END 】[l][cm]
 
 [jump target=*start]
